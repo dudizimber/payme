@@ -1,0 +1,46 @@
+group 'dev.vizo.payme'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.2'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+        flatDir {
+            dirs 'src/main/libs'
+        }
+    }
+
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'src/main/libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'src/main/libs', include: ['*.aar'])}
