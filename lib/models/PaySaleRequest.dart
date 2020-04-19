@@ -1,5 +1,4 @@
 class PaySaleRequest {
-  
   String buyerName;
   String buyerPhone;
   String buyerEmail;
@@ -10,20 +9,28 @@ class PaySaleRequest {
   String creditCardCVV;
   String creditCardExp;
 
-  PaySaleRequest({this.buyerEmail, this.buyerName, this.buyerPhone, this.buyerSocialID, this.creditCardCVV, this.creditCardExp, this.creditCardNumber, this.installments, this.paymentSaleID});
+  PaySaleRequest(
+      {this.buyerEmail,
+      this.buyerName,
+      this.buyerPhone,
+      this.buyerSocialID,
+      this.creditCardCVV,
+      this.creditCardExp,
+      this.creditCardNumber,
+      this.installments,
+      this.paymentSaleID});
 
   factory PaySaleRequest.def(String paymentSaleID) {
     return PaySaleRequest(
-      buyerEmail: 'example@example.com',
-      buyerName: 'Example',
-      buyerPhone: '999999999',
-      buyerSocialID: '0000000000',
-      creditCardCVV: '123',
-      creditCardExp: '1221',
-      creditCardNumber: '4580458045804580',
-      installments: '1',
-      paymentSaleID: paymentSaleID
-    );
+        buyerEmail: 'example@example.com',
+        buyerName: 'Example',
+        buyerPhone: '999999999',
+        buyerSocialID: '0000000000',
+        creditCardCVV: '123',
+        creditCardExp: '1221',
+        creditCardNumber: '4580458045804580',
+        installments: '1',
+        paymentSaleID: paymentSaleID);
   }
 
   Map<dynamic, dynamic> toMap() {

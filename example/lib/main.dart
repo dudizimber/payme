@@ -25,7 +25,6 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     try {
       const SELLER_KEY = "MPL15050-31782VOG-PUGRPVZO-3FVHWEYD";
-      const SELLER_KEY_DUDI = "MPL15870-51134L1C-QSTQJXYL-XSL8KZME";
       await Payme.init(SELLER_KEY, Environments.STAGING);
     } catch (e) {
       print('Error: $e');
@@ -34,8 +33,9 @@ class _MyAppState extends State<MyApp> {
     PaySaleResponse paySaleResponse = PaySaleResponse();
 
     try {
-      paySaleResponse = await Payme.paySale(PaySaleRequest.def('SALE1587-235002MC-LOFTL1YX-MFTKVJ4C'));
-    } catch(e) {
+      paySaleResponse = await Payme.paySale(
+          PaySaleRequest.def('SALE1587-235002MC-LOFTL1YX-MFTKVJ4C'));
+    } catch (e) {
       print('Error: ${e.toString()}');
     }
 
@@ -54,7 +54,8 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: ${_paySaleResponse == null ? 'NULL' : _paySaleResponse.transactionId ?? 'NULL'}\n'),
+          child: Text(
+              'Running on: ${_paySaleResponse == null ? 'NULL' : _paySaleResponse.transactionId ?? 'NULL'}\n'),
         ),
       ),
     );

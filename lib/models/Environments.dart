@@ -1,3 +1,1 @@
-enum Environments {
-  STAGING, PRODUCTION
-}
+enum Environments { STAGING, PRODUCTION }

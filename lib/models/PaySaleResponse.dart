@@ -55,34 +55,44 @@ class PaySaleResponse {
 
   factory PaySaleResponse.fromMethod(Map object) {
     return PaySaleResponse(
-      buyerCardExp:
-          object.containsKey('buyerCardExp') ? object['buyerCardExp'].toString() : null,
-      buyerCardMask:
-          object.containsKey('buyerCardMask') ? object['buyerCardMask'].toString() : null,
-      buyerEmail:
-          object.containsKey('buyerEmail') ? object['buyerEmail'].toString() : null,
-      buyerName: object.containsKey('buyerName') ? object['buyerName'].toString() : null,
-      buyerPhone:
-          object.containsKey('buyerPhone') ? object['buyerPhone'].toString() : null,
-      buyerSocialId:
-          object.containsKey('buyerSocialId') ? object['buyerSocialId'].toString() : null,
-      currency: object.containsKey('currency') ? object['currency'].toString() : null,
+      buyerCardExp: object.containsKey('buyerCardExp')
+          ? object['buyerCardExp'].toString()
+          : null,
+      buyerCardMask: object.containsKey('buyerCardMask')
+          ? object['buyerCardMask'].toString()
+          : null,
+      buyerEmail: object.containsKey('buyerEmail')
+          ? object['buyerEmail'].toString()
+          : null,
+      buyerName: object.containsKey('buyerName')
+          ? object['buyerName'].toString()
+          : null,
+      buyerPhone: object.containsKey('buyerPhone')
+          ? object['buyerPhone'].toString()
+          : null,
+      buyerSocialId: object.containsKey('buyerSocialId')
+          ? object['buyerSocialId'].toString()
+          : null,
+      currency:
+          object.containsKey('currency') ? object['currency'].toString() : null,
       installments:
           object.containsKey('installments') ? object['installments'] : null,
       isTokenSale:
           object.containsKey('isTokenSale') ? object['isTokenSale'] : null,
       paymeSaleCode:
           object.containsKey('paymeSaleCode') ? object['paymeSaleCode'] : null,
-      paymeSaleId:
-          object.containsKey('paymeSaleId') ? object['paymeSaleId'].toString() : null,
+      paymeSaleId: object.containsKey('paymeSaleId')
+          ? object['paymeSaleId'].toString()
+          : null,
       paymeSaleStatus: object.containsKey('paymeSaleStatus')
           ? object['paymeSaleStatus'].toString()
           : null,
       paymeSignature: object.containsKey('paymeSignature')
           ? object['paymeSignature'].toString()
           : null,
-      paymeStatus:
-          object.containsKey('paymeStatus') ? object['paymeStatus'].toString() : null,
+      paymeStatus: object.containsKey('paymeStatus')
+          ? object['paymeStatus'].toString()
+          : null,
       paymeTransactionAuthNumber:
           object.containsKey('paymeTransactionAuthNumber')
               ? object['paymeTransactionAuthNumber'].toString()
@@ -97,19 +107,23 @@ class PaySaleResponse {
           ? object['paymeTransactionTotal'].toString()
           : null,
       price: object.containsKey('price') ? object['price'] : null,
-      saleCreated:
-          object.containsKey('saleCreated') ? object['saleCreated'].toString() : null,
-      salePaidDate:
-          object.containsKey('salePaidDate') ? object['salePaidDate'].toString() : null,
+      saleCreated: object.containsKey('saleCreated')
+          ? object['saleCreated'].toString()
+          : null,
+      salePaidDate: object.containsKey('salePaidDate')
+          ? object['salePaidDate'].toString()
+          : null,
       saleReleaseDate: object.containsKey('saleReleaseDate')
           ? object['saleReleaseDate'].toString()
           : null,
-      saleStatus:
-          object.containsKey('saleStatus') ? object['saleStatus'].toString() : null,
+      saleStatus: object.containsKey('saleStatus')
+          ? object['saleStatus'].toString()
+          : null,
       statusCode:
           object.containsKey('statusCode') ? object['statusCode'] : null,
-      transactionId:
-          object.containsKey('transactionId') ? object['transactionId'].toString() : null,
+      transactionId: object.containsKey('transactionId')
+          ? object['transactionId'].toString()
+          : null,
     );
   }
 }

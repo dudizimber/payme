@@ -6,5 +6,4 @@ void main() {
   const MethodChannel channel = MethodChannel('payme');
 
   TestWidgetsFlutterBinding.ensureInitialized();
-
 }

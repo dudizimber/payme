@@ -15,9 +15,10 @@ class Payme {
 
   static Future<bool> init(String sellerKey, Environments environment) async {
     try {
-      await _channel.invokeMethod('init', <String, dynamic> {
+      await _channel.invokeMethod('init', <String, dynamic>{
         'sellerKey': sellerKey,
-        'environment': environment == Environments.PRODUCTION ? 'PRODUCTION' : 'STAGING' 
+        'environment':
+            environment == Environments.PRODUCTION ? 'PRODUCTION' : 'STAGING'
       });
       return true;
     } catch (e) {
@@ -35,9 +36,8 @@ class Payme {
       print('Pure Error: $e');
       throw PayMeError(e.code, e.message, e.details);
     }
-      print('Pure Response: $response');
+    print('Pure Response: $response');
     PaySaleResponse paySaleResponse = PaySaleResponse.fromMethod(response);
     return paySaleResponse;
   }
-
 }

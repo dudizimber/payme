@@ -19,7 +19,8 @@ class PayMeError implements Exception {
         this.errorDetailsEnglish = "Sale ID not found";
         break;
       case 305:
-        this.errorDetailsEnglish = "It was not possible to complete this action due to a missmatch of sale status";
+        this.errorDetailsEnglish =
+            "It was not possible to complete this action due to a missmatch of sale status";
         break;
       default:
         this.errorDetailsEnglish = "Translation not found: $errorDetails";
